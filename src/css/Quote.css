@@ -1,77 +1,144 @@
 /* Quote.css */
 
-.quote-container {
-    background-color: #f8f8f8;
+.link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .link-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .link-button-active {
+    background-color: #28a745;
+  }
+  
+  .quote-container {
+    background-color: #f7f7f7;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px auto;
     width: 80%;
-    max-width: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .quote-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .quote-authorSlug {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 8px;
+  }
+  
+  .quote-content {
+    font-size: 20px;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  
+  .like-button,
+  .new-quote {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .like-button:hover,
+  .new-quote:hover {
+    background-color: #218838;
+  }
+  
+  .new-quote {
+    background-color: #007bff;
+    margin-left: 10px;
+  }
+  
+  .new-quote:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Favorites Page */
+  .favorites-container {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favorites-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .search-container {
+    margin-bottom: 25px;
+  }
+  
+  .search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .favorites-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .favorites-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .favorites-item:last-child {
+    border-bottom: none;
   }
   
   .quote-text {
     font-size: 18px;
     font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
   }
   
   .quote-authorSlug {
     font-size: 14px;
-    margin-top: 4px;
+    color: #777;
+    margin-bottom: 4px;
   }
   
   .quote-content {
-    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
   }
   
-  .like-button, .new-quote {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
   
-  .like-button:hover, .new-quote:hover {
-    background-color: #0056b3;
-  }
-  
-  .link-button {
-    display: inline-block;
-    margin-top: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #007bff;
-    cursor: pointer;
-  }
-
-  
-  
-/* Quote.css */
-
-.link-button {
-    display: inline-block;
-    margin-top: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #007bff;
-    cursor: pointer;
-    user-select: none; /* Prevent text selection */
-    float: right; /* Float the button to the right */
-    margin-right: 20px; /* Add some margin on the right for spacing */
-  }
-  
-  .link-button:hover {
-    text-decoration: underline;
-  }
-  
-  /* Add a class to style the link when it's active */
-  .link-button-active {
-    text-decoration: underline;
-    font-weight: bold;
-    color: #0056b3; /* Change color when active */
-  }
   

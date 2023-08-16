@@ -11,7 +11,13 @@ const Quote = () => {
 
   useEffect(() => {
     fetchData();
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    setFavorites(storedFavorites);
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   const fetchData = async () => {
     try {
@@ -25,7 +31,7 @@ const Quote = () => {
   };
 
   const handleLike = () => {
-    if (quote) {
+    if (quote && !favorites.some(fav => fav._id === quote._id)) {
       setFavorites([...favorites, quote]);
     }
   };
@@ -37,12 +43,12 @@ const Quote = () => {
   return (
     <Router>
       <div>
-      <Link
+        <Link
           to="/favorites"
           onClick={() => setShowFavorites(!showFavorites)}
           className={`link-button ${showFavorites ? "link-button-active" : ""}`}
         >
-          {showFavorites ? "Hide Favorites" : "Go to Favorites"}
+          {showFavorites ? "Hide Favorites" : "Show Favorites"}
         </Link>
         <div className="quote-container">
           {quote && (
@@ -60,7 +66,6 @@ const Quote = () => {
           )}
         </div>
        
-        {/* show favorites list */}
         {showFavorites && (
           <Routes>
             <Route

@@ -1,10 +1,21 @@
 /* Title.css */
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the title horizontally */
+  margin: 20px 0;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
 .title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center the title text */
+}
