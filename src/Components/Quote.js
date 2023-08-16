@@ -11,14 +11,16 @@ const Quote = () => {
 
   useEffect(() => {
     fetchData();
-    const storedFavorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    const storedFavorites = JSON.parse(
+      localStorage.getItem("favorites") || "[]"
+    );
     setFavorites(storedFavorites);
   }, []);
 
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
-
+  // get data of every single quote
   const fetchData = async () => {
     try {
       const response = await axios.get("https://api.quotable.io/random");
@@ -29,13 +31,13 @@ const Quote = () => {
       console.error("Error fetching data:", error);
     }
   };
-
+  // like button add to favorites
   const handleLike = () => {
-    if (quote && !favorites.some(fav => fav._id === quote._id)) {
+    if (quote && !favorites.some((fav) => fav._id === quote._id)) {
       setFavorites([...favorites, quote]);
     }
   };
-
+  // the button that fetch new quote every time you click on him
   const handleNewQuote = () => {
     fetchData();
   };
@@ -43,13 +45,7 @@ const Quote = () => {
   return (
     <Router>
       <div>
-        <Link
-          to="/favorites"
-          onClick={() => setShowFavorites(!showFavorites)}
-          className={`link-button ${showFavorites ? "link-button-active" : ""}`}
-        >
-          {showFavorites ? "Hide Favorites" : "Show Favorites"}
-        </Link>
+        {/* display quote */}
         <div className="quote-container">
           {quote && (
             <div>
@@ -62,10 +58,25 @@ const Quote = () => {
               <button className="new-quote" onClick={handleNewQuote}>
                 New Quote
               </button>
+              <div className="favorites-count">
+                Number of Favorites: {favorites.length}
+              </div>
             </div>
           )}
         </div>
-       
+
+         {/* button that show you or hide the favorites */}
+         <div className="link-button-container">
+         <Link
+          to="/favorites"
+          onClick={() => setShowFavorites(!showFavorites)}
+          className={`link-button ${showFavorites ? "link-button-active" : ""}`}
+        >
+          {showFavorites ? "Hide Favorites" : "Show Favorites"}
+        </Link>
+        </div>
+
+        {/* if  'showFavorites' true its will show you the list of favorites --> (page favorites) */}
         {showFavorites && (
           <Routes>
             <Route

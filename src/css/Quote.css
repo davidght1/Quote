@@ -1,144 +1,181 @@
 /* Quote.css */
 
 .link-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  .link-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .link-button-active {
-    background-color: #28a745;
-  }
-  
-  .quote-container {
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-  .quote-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .quote-authorSlug {
-    font-size: 18px;
-    color: #777;
-    margin-bottom: 8px;
-  }
-  
-  .quote-content {
-    font-size: 20px;
-    color: #444;
-    line-height: 1.4;
-    margin-bottom: 15px;
-  }
-  
-  .like-button,
-  .new-quote {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .like-button:hover,
-  .new-quote:hover {
-    background-color: #218838;
-  }
-  
-  .new-quote {
-    background-color: #007bff;
-    margin-left: 10px;
-  }
-  
-  .new-quote:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Favorites Page */
-  .favorites-container {
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .favorites-container h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .search-container {
-    margin-bottom: 25px;
-  }
-  
-  .search-container input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 18px;
-    color: #555;
-  }
-  
-  .favorites-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .favorites-item {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .favorites-item:last-child {
-    border-bottom: none;
-  }
-  
-  .quote-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 6px;
-  }
-  
-  .quote-authorSlug {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 4px;
-  }
-  
-  .quote-content {
-    font-size: 16px;
-    color: #444;
-  }
-  
-  
-  
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+  border: 1px solid #007bff; /* Add border for a button-like appearance */
+}
+
+.link-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3; /* Darken the border color on hover */
+}
+
+.link-button-active {
+  background-color: #28a745;
+  border-color: #28a745; /* Darken the border color for active state */
+}
+
+/* Center the text vertically and horizontally within the button */
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add an arrow icon to indicate show/hide state */
+.link-button::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  margin-left: 10px;
+  transform: translateY(2px);
+  transition: transform 0.3s;
+}
+
+.link-button-active::after {
+  transform: translateY(2px) rotate(180deg); /* Rotate the arrow icon on active state */
+}
+
+.link-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.quote-container {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.quote-authorSlug {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.quote-content {
+  font-size: 20px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.like-button,
+.new-quote {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.like-button:hover,
+.new-quote:hover {
+  background-color: #218838;
+}
+
+.new-quote {
+  background-color: #007bff;
+  margin-left: 10px;
+}
+
+.new-quote:hover {
+  background-color: #0056b3;
+}
+
+.favorites-count {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Favorites Page */
+.favorites-container {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.search-container {
+  margin-bottom: 25px;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #555;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+}
+
+.favorites-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.favorites-item:last-child {
+  border-bottom: none;
+}
+
+.favorites-quote-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.favorites-quote-authorSlug {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.favorites-quote-content {
+  font-size: 16px;
+  color: #444;
+}

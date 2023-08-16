@@ -6,7 +6,7 @@ const Favorites = ({ favorites }) => {
   const filteredFavorites = favorites.filter((quote) =>
     quote.author.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
+// handle the search value by author
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -14,6 +14,7 @@ const Favorites = ({ favorites }) => {
   return (
     <div className="favorites-container">
       <h2>Favorites</h2>
+      {/* search bar */}
       <div className="search-container">
         <input
           type="text"
@@ -23,6 +24,7 @@ const Favorites = ({ favorites }) => {
         />
       </div>
       <ul>
+        {/* display all favorite quotes and filltered if have*/}
         {filteredFavorites.map((quote, index) => (
           <li key={index}>
             <div className="quote-text">{quote.author}</div>
