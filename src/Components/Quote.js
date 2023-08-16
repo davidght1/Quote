@@ -60,7 +60,7 @@ const Quote = () => {
           )}
         </div>
        
-
+        {/* show favorites list */}
         {showFavorites && (
           <Routes>
             <Route
