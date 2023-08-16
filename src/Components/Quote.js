@@ -59,7 +59,7 @@ const Quote = () => {
                 New Quote
               </button>
               <div className="favorites-count">
-                Number of Favorites: {favorites.length}
+                Your's Favorites: {favorites.length}
               </div>
             </div>
           )}
