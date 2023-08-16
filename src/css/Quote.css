@@ -1,0 +1,77 @@
+/* Quote.css */
+
+.quote-container {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .quote-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .quote-authorSlug {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  .quote-content {
+    margin-top: 10px;
+  }
+  
+  .like-button, .new-quote {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .like-button:hover, .new-quote:hover {
+    background-color: #0056b3;
+  }
+  
+  .link-button {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  
+  
+/* Quote.css */
+
+.link-button {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    float: right; /* Float the button to the right */
+    margin-right: 20px; /* Add some margin on the right for spacing */
+  }
+  
+  .link-button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add a class to style the link when it's active */
+  .link-button-active {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #0056b3; /* Change color when active */
+  }
+  

@@ -1,0 +1,40 @@
+/* Favorites.css */
+
+.favorites-container {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .favorites-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .favorites-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .favorites-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .favorites-item:last-child {
+    border-bottom: none;
+  }
+  
+  .favorites-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .favorites-content {
+    margin-top: 5px;
+  }
+  
